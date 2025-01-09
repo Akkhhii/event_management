@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper w-full bg-red-40 relative">
+        <div class="menudiv fixed w-[0%] h-[100%] bg-black z-40 right-0 text-white lg:hidden transition-all 0 4s ease-out">
+            <div class="links w-full h-[90%] flex flex-col relative top-[5em] items-center gap-[2em] py-[2em]">
+                <a href="#" class=" transition-all 0.3s ease-out border-white border-[0.3px] w-[90%] py-[0.3em] rounded-md text-center hover:bg-white hover:text-black font-semibold">Home</a>
+                <a href="#" class=" transition-all 0.3s ease-out border-white border-[0.3px] w-[90%] py-[0.3em] rounded-md text-center hover:bg-white hover:text-black font-semibold" onclick="scrollToSection('.footer')">Contact</a>
+                <a href="#" class=" transition-all 0.3s ease-out border-white border-[0.3px] w-[90%] py-[0.3em] rounded-md text-center hover:bg-white hover:text-black font-semibold" onclick="scrollToSection('.footer')">About</a>
+                <a href="#" class=" transition-all 0.3s ease-out border-white border-[0.3px] w-[90%] py-[0.3em] rounded-md text-center hover:bg-white hover:text-black font-semibold" onclick="scrollToSection('.page2')">Book Ticket</a>
+                <a href="#" class=" transition-all 0.3s ease-out border-white border-[0.3px] w-[90%] py-[0.3em] rounded-md text-center hover:bg-white hover:text-black font-semibold" onclick="scrollToSection('.page4')">Ticket Details</a>
+
+                <button class="absolute bottom-[2em] border-white border-[0.2px] w-[50%] rounded-md py-[0.3em] font-semibold hover:bg-white hover:text-black">SignUp</button>
+            </div>
+        </div>
+        <nav
+            class="Navbar w-full h-[5em] bg-black fixed top-0 z-50 flex justify-between items-center text-white px-[1em] lg:px-[6em]">
+            <h3 class="font-bold text-xl">LaughTrack</h3>
+            <img src="./public/menu.png" alt="menu" class="w-[2em] h-[1.5em] cursor-pointer z-50 transition-all 0 4s ease-out" id="menu">
+            <img src="./public/xmenu.png" alt="menu" class="w-[2em] h-[1.5em] cursor-pointer lg:hidden z-50 absolute w-[3em] h-[3em] right-[0.5em]  transition-all 0 4s ease-out" id="cross">
+            <div class="links hidden md:hidden lg:visible lg:w-[30%] lg:full lg:flex lg:justify-between">
+                <a href="#" class="hover:text-blue-500 transition-all 0.3s ease-out">Home</a>
+                <a href="#" class="hover:text-blue-500 transition-all 0.3s ease-out" onclick="scrollToSection('.footer')">Contact</a>
+                <a href="#" class="hover:text-blue-500 transition-all 0.3s ease-out" onclick="scrollToSection('.footer')">About</a>
+                <a href="#" class="hover:text-blue-500 transition-all 0.3s ease-out" onclick="scrollToSection('.page2')">Book Ticket</a>
+                <a href="#" class="hover:text-blue-500 transition-all 0.3s ease-out" onclick="scrollToSection('.page4')">Ticket Details</a>
+            </div>
+        </nav>
+        <div
+            class="page1 w-full h-[48em] bg-[url(https://images.unsplash.com/photo-1545328421-44f218f04c18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGNvbWVkeSUyMHNob3d8ZW58MHwxfDB8fHww)] top-[5em] relative z-10 bg-cover bg-center md:bg-[url(https://media.istockphoto.com/id/1667997784/photo/young-woman-talking-during-stand-up-comedy-show.webp?a=1&b=1&s=612x612&w=0&k=20&c=efCHp-SAsogrJM5MBRMOkFt0L87Vd4PxRi8DbNmbcSE=)]">
+            <div
+                class="overlay w-full h-full bg-black/40 md:bg-black/60 absolute flex flex-col justify-center items-center text-white gap-[8em]">
+                <div class="herosection w-full flex flex-col justify-center items-center gap-[3em] text-center">
+                    <h1 class="font-bold text-4xl md:text-5xl" id="hr1"> Welcome to LaughTrack</h1>
+                    <p class="text-lg px-[1em] italic md:text-xl">Laughter is the key for a success and healthy lifestyle.</p>
+                    <div class="showdetails flex flex-col gap-[0.8em]">
+                        <p class="text-lg italic px-[0.5em] text-center md:px-[6em] lg:px-[20em]">Discover a world of laughter with our new
+                            comedy show app! Easily browse upcoming events, book tickets, and manage your schedule all
+                            in one place. Get ready to laugh out loud at the best comedy shows in your city</p>
+                    </div>
+                </div>
+                <div
+                    class="btns w-full flex justify-center items-center gap-[1em] py-[1em] font-semibold underline underline-offset-[0.3em] lg:gap-[6em]">
+                    <button
+                        class="bg-black/70 py-[0.5em] px-[3em] rounded-md border-white border-[1px] hover:bg-white hover:text-black transition-all 0.3s ease-out" onclick="scrollToSection('.page2')">Buy
+                        Tickets</button>
+                    <button
+                        class="bg-black/70 py-[0.5em] px-[2.25em] rounded-md border-white border-[1px] hover:bg-white hover:text-black transition-all 0.3s ease-out" onclick="scrollToSection('.page4')" >View
+                        Schedule</button>
+                </div>
+            </div>
+        </div>
+        <div class="page2 w-full h-screen bg-[] top-[5em] relative z-10 flex flex-col items-center gap-[2em] md:h-[60em]">
+            <div class="text w-full">
+                <div class="text w-full h-[5em] flex items-center justify-center">
+                    <h2 class="font-bold text-xl uppercase underline underline-offset-[0.4em] lg:text-2xl" id="getticket">Get your show tickets now
+                    </h2>
+                </div>
+            </div>
+            <div
+                class="comics w-[95%] h-[6.5em] flex justify-center items-center overflow-x-auto gap-[1em] md:w-[70%] md:h-[8em] md:gap-[3em] lg:w-[50%] lg:h-[17em]">
+                <div class="images w-[100%] h-[100%] ">
+                    <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyc29ufGVufDB8MHwwfHx8MQ%3D%3D"
+                        alt="Comics " class="w-full h-full rounded-full">
+                </div>
+                <div class="images w-[100%] h-[100%] rounded-full">
+                    <img src="https://plus.unsplash.com/premium_photo-1689629870780-5d0e655383e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29ufGVufDB8MHwwfHx8MQ%3D%3D"
+                        alt="Comics " class="w-full h-full rounded-full">
+                </div>
+                <div class="images w-[100%] h-[100%] rounded-full">
+                    <img src="https://plus.unsplash.com/premium_photo-1690395794791-e85944b25c0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfDB8MHx8fDE%3D"
+                        alt="Comics " class="w-full h-full rounded-full">
+                </div>
+                <div class="images w-[100%] h-[100%] rounded-full">
+                    <img src="https://plus.unsplash.com/premium_photo-1689531953275-a5cfcc458931?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcnNvbnxlbnwwfDB8MHx8fDE%3D"
+                        alt="Comics " class="w-full h-full rounded-full">
+                </div>
+            </div>
+            <div
+                class="booktickets w-[95%] h-[85%] bg-white rounded-t-lg flex flex-col items-center py-[1em] gap-[2em] md:w-[70%] lg:w-[50%]">
+                <div
+                    class="booknow w-[95%] h-[10em] bg-white rounded-xl flex justify-between text-white border-[0.2px] border-black/50">
+                    <div
+                        class="left w-[20%] h-full bg-gray-800 rounded-l-xl flex flex-col justify-center items-center relative text-center border-r-2 border-white border-dashed">
+                        <p class="w-[6.7em] text-2xl font-bold rotate-[-90deg] absolute" id="ticket">Ticket</p>
+                    </div>
+                    <div
+                        class="mid w-[70%] h-full bg-white/30 flex flex-col justify-center px-[1em] text-black gap-[0.8em] md:text-center">
+                        <h3><span class="font-semibold">Address :</span> <span class="italic">Lorem ipsum dolor sit amet
+                                consectetur.</span> </h3>
+                        <p><span class="font-semibold">Organiger : </span> <span class="italic">ABC Company</span> </p>
+                        <p class="font-semibold">Price : $15</p>
+                        <p class="font-semibold">Date : 21-02-2025</p>
+                    </div>
+                    <div
+                        class="right w-[10%] h-full bg-blue-600 rounded-r-xl flex flex-col justify-center items-center relative text-center cursor-pointer ">
+                        <p class="w-[10em] font-bold rotate-[-90deg] absolute " id="bookticket">Book Now</p>
+                    </div>
+                </div>
+                <div
+                    class="booknow w-[95%] h-[10em] bg-white rounded-xl flex justify-between text-white border-[0.2px] border-black/50">
+                    <div
+                        class="left w-[20%] h-full bg-gray-800 rounded-l-xl flex flex-col justify-center items-center relative text-center border-r-2 border-white border-dashed">
+                        <p class="w-[6.7em] text-2xl font-bold rotate-[-90deg] absolute" id="ticket">Ticket</p>
+                    </div>
+                    <div
+                        class="mid w-[70%] h-full bg-white/30 flex flex-col justify-center px-[1em] text-black gap-[0.8em] md:text-center">
+                        <h3><span class="font-semibold">Address :</span> <span class="italic">Lorem ipsum dolor sit amet
+                                consectetur.</span> </h3>
+                        <p><span class="font-semibold">Organiger : </span> <span class="italic">ABC Company</span> </p>
+                        <p class="font-semibold">Price : $15</p>
+                        <p class="font-semibold">Date : 21-02-2025</p>
+                    </div>
+                    <div
+                        class="right w-[10%] h-full bg-blue-600 rounded-r-xl flex flex-col justify-center items-center relative text-center cursor-pointer">
+                        <p class="w-[10em] font-bold rotate-[-90deg] absolute " id="bookticket">Book Now</p>
+                    </div>
+                </div>
+                <div
+                    class="booknow w-[95%] h-[10em] bg-white rounded-xl flex justify-between text-white border-[0.2px] border-black/50">
+                    <div
+                        class="left w-[20%] h-full bg-gray-800 rounded-l-xl flex flex-col justify-center items-center relative text-center border-r-2 border-white border-dashed">
+                        <p class="w-[6.7em] text-2xl font-bold rotate-[-90deg] absolute" id="ticket">Ticket</p>
+                    </div>
+                    <div
+                        class="mid w-[70%] h-full bg-white/30 flex flex-col justify-center px-[1em] text-black gap-[0.8em] md:text-center">
+                        <h3><span class="font-semibold">Address :</span> <span class="italic">Lorem ipsum dolor sit amet
+                                consectetur.</span> </h3>
+                        <p><span class="font-semibold">Organiger : </span> <span class="italic">ABC Company</span> </p>
+                        <p class="font-semibold">Price : $15</p>
+                        <p class="font-semibold">Date : 21-02-2025</p>
+
+                    </div>
+                    <div
+                        class="right w-[10%] h-full bg-blue-600 rounded-r-xl flex flex-col justify-center items-center relative text-center cursor-pointer">
+                        <p class="w-[10em] font-bold rotate-[-90deg] absolute " id="bookticket">Book Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page3 w-full h-[45em] md:h-[50em] bg-blue-2 00 top-[5em] relative z-10 flex flex-col items-center py-[1em] px-[1em] gap-[2em] border-t-2 border-black/40">
+            <div class="text w-full h-[3em] flex items-center justify-center">
+                <h2 class="font-semibold uppercase underline underline-offset-[0.3em] text-xl" id="getticket">Book your slot</h2>
+            </div>
+            <div class="flex flex-col w-[95%] gap-[3em] items-center justify-center lg:flex-row">
+                <div class="calendar md:w-[60%] lg:w-[40%]">
+                    <img src="./public/calendarcopy.jpg" alt="" class="rounded-md md:w-[100%] lg:w-[75%]">
+                </div>
+                <div class="w-full md:w-[60%] lg:w-[30%] flex flex-col items-center justify-center gap-[2em] lg:h-[30em] lg:gap-[6em]">
+                    <div class="slotdetails w-[100%] bg-[#F1F1FD] rounded-md flex items-center justify-between gap-[1em] md:w-[100%] lg:w-[80%]">
+                        <div class="left w-1/2 h-full flex flex-col gap-[1em]">
+                            <div class="box w-full flex gap-[2em] items-center">
+                                <div class="box1 w-[2em] h-[2em] rounded-md"></div>
+                                <p class="font-medium">Booked</p>
+                            </div>
+                            <div class="box w-full flex gap-[2em] items-center">
+                                <div class="box2 w-[2em] h-[2em] rounded-md"></div>
+                                <p class="font-medium">Available</p>
+                            </div>
+                        </div>
+                        <div class="right w-1/2 h-full flex flex-col gap-[1em]">
+                            <div class="box w-full flex gap-[2em] items-center">
+                                <div class="box3 w-[2em] h-[2em] rounded-md"></div>
+                                <p class="font-medium">Reserved</p>
+                            </div>
+                            <div class="box w-full flex gap-[2em] items-center">
+                                <div class="box4 w-[2em] h-[2em] rounded-md"></div>
+                                <p class="font-medium">Not Avail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-orange-500 text-white font-semibold py-[0.5em] rounded-lg cursor-pointer border-orange-500 border-2 hover:bg-transparent hover:text-orange-500 transition-all 0.3s ease-out w-[80%] md:w-[40%]">Proceed</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="page4 w-full h-[35em] border-t-2 border-black/60 top-[5em] relative z-10 flex flex-col items-center gap-[2em] py-[2em]">
+            <div class="text">
+                <h2 class="font-semibold uppercase underline underline-offset-[0.3em]" id="ticket">Ticket Details</h2>
+            </div>
+            <div
+                class="bookings w-[95%] h-[60%] rounded-md flex flex-col justify-between items-center border-2 border-black/40 md:w-[50%] md:h-[22em] lg:w-[30%]">
+                <div class="imgdiv w-[100%] h-[60%]">
+                    <img src="https://media.istockphoto.com/id/1316581169/photo/stage-with-microphone-and-stool-with-red-neon-lamp-with-the-word-comedy-space-for-text.webp?a=1&b=1&s=612x612&w=0&k=20&c=cBfRqbEd_UooPVxhjTNJYFk_W6buS4X8NWQE-mAi38I="
+                        alt="ticket images" class="rounded-t-md w-full h-full">
+                </div>
+                <div class="detailstext w-[100%] h-[40%] flex flex-col justify-center items-start px-[1em] py-[0.5em] border-t-[0.2px] border-black/50 md:items-center md:gap-[0.5em]">
+                    <p class="font-medium">Name : person1 and person2</p>
+                    <h3><span class="font-semibold">Address : <span class="italic font-medium">Lorem ipsum dolor sit amet consectetur.</span></span></h3>
+                    <p></p>
+                    <p class="font-medium">Organiger : ABC Company</p>
+                    <p class="font-medium">Seats-2 Adults</p>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+        <footer class="footer w-full bg-black bottom-0 text-white py-[3em] text-center">
+            <div class="container mx-auto px-4 md:flex md:justify-between md:flex-col md:gap-[3em] lg:flex-row lg:text-left">
+
+                <div class="mb-6 md:mb-0 md:px-[10em] lg:w-[100%] lg:flex lg:flex-col lg:items-center">
+                  <h3 class="text-lg font-bold text-white mb-2">About LaughTrack</h3>
+                  <p class="text-sm">
+                    LaughTrack is your one-stop destination for comedy shows. Explore events, book tickets, and enjoy unforgettable moments of laughter!
+                  </p>
+                </div>
+            
+
+                <div class="mb-6 md:mb-0 lg:w-[50%] lg:flex lg:flex-col lg:items-center lg:text-center">
+                  <h3 class="text-lg font-bold text-white mb-2">Quick Links</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a href="/about" class="hover:text-white">About Us</a></li>
+                    <li><a href="/events" class="hover:text-white">Upcoming Shows</a></li>
+                    <li><a href="/contact" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="/faq" class="hover:text-white">FAQs</a></li>
+                  </ul>
+                </div>
+            
+
+                <div class="mb-6 md:mb-0 lg:w-[50%] lg:flex lg:flex-col lg:items-center">
+                  <h3 class="text-lg font-bold text-white mb-2">Follow Us</h3>
+                  <div class="flex space-x-4 items-center justify-center gap-[1em] lg:gap-[0.5em] lg:h-[2em] ">
+                    <a href="#" class="hover:text-white">
+                        <img src="./public/facebook.png" alt="" class="w-[2em] h-[2em]">
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <img src="./public/instagram.png" alt="" class="w-[2em] h-[2em]">
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <img src="./public/xicon.png" alt="" class="w-[2em] h-[2em]">
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <img src="./public/youtube.png" alt="" class="w-[2em] h-[2em]">
+                    </a>
+                  </div>
+                </div>
+            
+
+                <div class="w-full mx-auto md:flex md:flex-col md:items-center md:gap-[1em]">
+                  <h3 class="text-lg font-bold text-white mb-2">We Accept</h3>
+                  <div class="flex items-center justify-center gap-[2em]">
+                    <img src="https://w7.pngwing.com/pngs/20/987/png-transparent-logo-visa-credit-card-business-visa-text-trademark-payment-thumbnail.png" alt="Visa" class="h-8">
+                    <img src="https://w7.pngwing.com/pngs/924/607/png-transparent-mastercard-credit-card-business-debit-card-logo-mastercard-text-service-orange-thumbnail.png" alt="MasterCard" class="h-8">
+                    <img src="https://w7.pngwing.com/pngs/856/570/png-transparent-paypal-friends-without-a-border-logo-business-paypal-blue-image-file-formats-text-thumbnail.png" alt="PayPal" class="h-8">
+                    <img src="https://easydigitaldownloads.com/wp-content/uploads/edd/2019/03/stripe-product-image.png" alt="Stripe" class="h-8">
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Bottom Section -->
+              <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm">&copy; 2025 LaughTrack. All rights reserved.</p>
+              </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

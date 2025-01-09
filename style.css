@@ -1,0 +1,54 @@
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+
+html, body {
+height : 100%;
+width: 100%;
+font-family: "Roboto", sans-serif;
+}
+#menu{
+    display: none;
+}
+#cross{
+    display: none;
+}
+
+#ticket{
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+#bookticket{
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+#getticket{
+    letter-spacing: 0.1em;
+}
+
+#hr1{
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+.box1{
+    background: linear-gradient(90deg, rgba(1,133,255,1) 13%, rgba(4,182,255,1) 75%);
+}
+.box2{
+    background: linear-gradient(90deg, rgb(165, 165, 165) 13%, rgb(161, 154, 154) 75%);
+}
+.box3{
+    background: linear-gradient(90deg, rgb(209, 209, 209) 13%, rgb(210, 210, 210) 75%);
+}
+.box4{
+    background: linear-gradient(90deg, rgb(147, 43, 43) 13%, rgb(140, 42, 42) 75%);
+}
+
+@media only screen and (max-width:1091px) {
+    #menu{
+        display: block;
+    }
+}
